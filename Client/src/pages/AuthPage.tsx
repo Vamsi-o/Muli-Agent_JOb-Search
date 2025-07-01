@@ -17,7 +17,9 @@ const AuthPage: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const url = isLogin ? '/api/v1/auth/login' : '/api/v1/auth/register';
+      const url = isLogin
+        ? 'https://muli-agent-job-search.onrender.com/api/v1/auth/login'
+        : 'https://muli-agent-job-search.onrender.com/api/v1/auth/register';
       const res = await axios.post(url, { email, password });
       localStorage.setItem('token', res.data.token);
       navigate('/search');

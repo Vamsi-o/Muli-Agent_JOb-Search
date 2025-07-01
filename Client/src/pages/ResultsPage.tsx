@@ -18,7 +18,7 @@ const ResultsPage: React.FC = () => {
   const [jobs, setJobs] = useState<any[]>([]);
   const [locationFilter, setLocationFilter] = useState('All');
   useEffect(() => {
-    fetch('/api/v1/job-search/all')
+    fetch('https://muli-agent-job-search.onrender.com/api/v1/job-search/all')
       .then(res => res.json())
       .then(data => setJobs(data.jobs || []));
   }, []);

@@ -15,7 +15,7 @@ const JobSearchPage: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.post('/api/v1/job-search', { role });
+      const res = await axios.post('https://muli-agent-job-search.onrender.com/api/v1/job-search', { role });
       navigate('/results', { state: { jobs: res.data.jobs } });
     } catch (err: any) {
       setError(err.response?.data?.error || 'Something went wrong.');
