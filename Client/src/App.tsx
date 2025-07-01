@@ -66,7 +66,7 @@ const TopNav: React.FC = () => {
       mt: 2,
       width: { xs: '95vw', md: '80vw' },
       borderRadius: 5,
-      background: 'rgba(255,255,255,0.85)',
+      background: 'linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%)',
       boxShadow: '0 4px 24px 0 rgba(30, 34, 90, 0.08)',
       backdropFilter: 'blur(8px)',
       zIndex: 1201,
@@ -90,10 +90,7 @@ const TopNav: React.FC = () => {
               <LogoutButton onLogout={handleLogout} />
             </>
           ) : (
-            <>
-              <Button component={RouterLink} to="/auth" color="primary" sx={{ fontWeight: 700, fontSize: 16, px: 2, borderRadius: 2 }}>Login</Button>
-              <Button component={RouterLink} to="/auth" variant="contained" color="primary" sx={{ fontWeight: 700, fontSize: 16, px: 3, borderRadius: 2 }}>Get Started</Button>
-            </>
+            <Button component={RouterLink} to="/auth" variant="contained" color="primary" sx={{ fontWeight: 700, fontSize: 16, px: 3, borderRadius: 2 }}>Get Started</Button>
           )}
         </Box>
       </Toolbar>

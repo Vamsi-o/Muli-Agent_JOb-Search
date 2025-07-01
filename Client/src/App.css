@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+/* Ensure AppBar and page backgrounds match */
+.navbar {
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+}
